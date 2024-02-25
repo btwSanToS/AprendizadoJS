@@ -19,7 +19,7 @@ console.log(saudacao2); // Retorno: Olá, Santos!
 // Segunda resolução, aprimorada para não ter variáveis de nomes específicos.
 
 function cumprimentar(text) {
-    return 'Olá ' + text + '!'
+    return `Olá ${text}!` 
 }
 
 const saudacao = cumprimentar('André')
