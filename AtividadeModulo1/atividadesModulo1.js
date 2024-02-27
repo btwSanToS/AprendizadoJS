@@ -30,7 +30,7 @@ Escreva uma função que receba a idade de uma pessoa em anos e retorne a mesma 
 OBS: Considere que um ano tem 365 dias. Desconsidere anos bissextos e desconsidere também dias decorridos desde o último aniversário.
 */
 
-function converterIdadeDias(idadeEmAnos){
+function converterIdadeDias(idadeEmAnos) {
     const diasPorAno = 365
     const idadeEmDias = idadeEmAnos * diasPorAno
 
@@ -92,16 +92,43 @@ console.log(referenciaMes(8))
 console.log(referenciaMes(9))
 console.log(referenciaMes(10))
 console.log(referenciaMes(11))
-console.log(referenciaMes(12)) 
+console.log(referenciaMes(12))
 
 /* 05)
 Crie uma função que receba dois números e retorne se o primeiro é maior ou igual ao segundo.
 Exemplo: maiorOuIgual (0, 0) // Retornará True
 */
 
-function maiorOuIgual(num1, num2){
+function maiorOuIgual(num1, num2) {
     return num1 >= num2
 }
 
 let resultadoFinal = maiorOuIgual(1, 2)
 console.log(resultadoFinal)
+
+/* 06)
+Escreva uma função que receba um valor booleano ou numérico. 
+Se o parâmetro fornecido for booleano, o retorno da função deverá ser o inverso. 
+Por exemplo, se a entrada for false, retornará true. Se o parâmetro for numérico, o retorno será o número inverso. 
+Por exemplo, se for fornecido 1, o retorno será -1. 
+Se o parâmetro de entrada não for de nenhum dos tipo acima, retorne "booleano ou número esperados, mas o parâmetro é do tipo ...".
+
+Ex.:
+inverso(true) // retornará false
+inverso("6") // retornará "booleano ou número esperados, mas o parâmetro é do tipo string" 
+inverso(-2000) // retornará 2000
+inverso("programação") // retornará "booleano ou números esperado, mas o parâmetro é do tipo...."
+*/
+
+function valorInvertido(parametro) {
+    return typeof parametro === 'number' ? -parametro : 
+        typeof parametro === 'boolean' ? !parametro :
+        `booleano ou números esperado, mas o parâmetro é do tipo ${typeof parametro}`;
+
+}
+
+console.log(valorInvertido("25"))
+console.log(valorInvertido(-3456))
+console.log(valorInvertido(3456))
+console.log(valorInvertido(null))
+console.log(valorInvertido(false))
