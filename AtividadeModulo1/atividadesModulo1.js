@@ -93,3 +93,15 @@ console.log(referenciaMes(9))
 console.log(referenciaMes(10))
 console.log(referenciaMes(11))
 console.log(referenciaMes(12)) 
+
+/* 05)
+Crie uma função que receba dois números e retorne se o primeiro é maior ou igual ao segundo.
+Exemplo: maiorOuIgual (0, 0) // Retornará True
+*/
+
+function maiorOuIgual(num1, num2){
+    return num1 >= num2
+}
+
+let resultadoFinal = maiorOuIgual(1, 2)
+console.log(resultadoFinal)
