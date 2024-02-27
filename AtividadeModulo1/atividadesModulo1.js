@@ -121,9 +121,9 @@ inverso("programação") // retornará "booleano ou números esperado, mas o par
 */
 
 function valorInvertido(parametro) {
-    return typeof parametro === 'number' ? -parametro : 
+    return typeof parametro === 'number' ? -parametro :
         typeof parametro === 'boolean' ? !parametro :
-        `booleano ou números esperado, mas o parâmetro é do tipo ${typeof parametro}`;
+            `booleano ou números esperado, mas o parâmetro é do tipo ${typeof parametro}`;
 
 }
 
@@ -132,3 +132,20 @@ console.log(valorInvertido(-3456))
 console.log(valorInvertido(3456))
 console.log(valorInvertido(null))
 console.log(valorInvertido(false))
+
+/* 07)
+Desenvolva uma função que recebe dois números inteiros não negativos (maiores ou iguais a zero) e realize a multiplicação deles. 
+Porém, não utilize o operador de mutiplicação.
+multiplicar(5, 5) // retornará 25
+multiplicar(0, 7) // retornará 0
+*/
+
+function multiplicar(valor1, valor2) {
+
+    if (valor2 === 0){
+        return 0
+    }
+    return valor1 + multiplicar(valor1, valor2 -1)
+}
+
+console.log(multiplicar(4, 5))
