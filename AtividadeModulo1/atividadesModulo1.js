@@ -133,10 +133,35 @@ multiplicar(0, 7) // retornará 0
 
 function multiplicar(valor1, valor2) {
 
-    if (valor2 === 0){
+    if (valor2 === 0) {
         return 0
     }
-    return valor1 + multiplicar(valor1, valor2 -1)
+    return valor1 + multiplicar(valor1, valor2 - 1)
 }
 
 console.log(multiplicar(4, 5))
+
+/* 08)
+Escreva uma função que receba dois parâmetros. 
+O primeiro parâmetro é o elemento que repetirá, enquanto que o segundo será o número de vezes que haverá repetição. 
+Um array será retornado.
+repetir("código", 2) // retornará ["código", "código"] 
+repetir(7, 3) // retornará [7, 7, 7]
+*/
+
+function repeticaoDados(elemento, quantidade) {
+    if (typeof elemento !== 'number' && typeof elemento !== 'string') {
+        return 'O primeiro parâmetro deve ser um número ou uma string.'
+    }
+
+    if (!Number.isInteger(quantidade) || quantidade < 0) {
+        return 'O segundo parâmetro deve ser um número inteiro não negativo'
+    }
+
+    const resultadoFinal = Array(quantidade).fill(elemento)
+
+    return resultadoFinal
+}
+
+console.log(repeticaoDados(123, 4))
+console.log(repeticaoDados('Texto', 2))
