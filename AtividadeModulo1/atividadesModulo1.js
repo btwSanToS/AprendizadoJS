@@ -155,13 +155,29 @@ function repeticaoDados(elemento, quantidade) {
     }
 
     if (!Number.isInteger(quantidade) || quantidade < 0) {
-        return 'O segundo parâmetro deve ser um número inteiro não negativo'
+        return 'O segundo parâmetro deve ser um número inteiro maior que 0'
     }
 
     const resultadoFinal = Array(quantidade).fill(elemento)
-
     return resultadoFinal
 }
 
 console.log(repeticaoDados(123, 4))
 console.log(repeticaoDados('Texto', 2))
+
+/* 09)
+Elabore uma função que recebe um número como parâmetro e retorne uma string com o símbolo "+" na quantidade especificada no parâmetro
+simboloMais(2) // retornará "++" 
+simboloMais(4) // retornará "++++"
+*/
+
+function repeticaoParametro(quantidade) {
+    if (!Number.isInteger(quantidade) || quantidade < 0) {
+        return 'O parâmetro deve ser um número inteiro maior que 0'
+    }
+
+    const resultadoFinal = '+'.repeat(quantidade)
+    return resultadoFinal
+}
+
+console.log(repeticaoParametro(6))
