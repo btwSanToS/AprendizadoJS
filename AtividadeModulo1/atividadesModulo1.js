@@ -81,18 +81,9 @@ function referenciaMes(informeMes) {
 
     return mes[informeMes - 1]
 }
-console.log(referenciaMes(1))
-console.log(referenciaMes(2))
-console.log(referenciaMes(3))
+
 console.log(referenciaMes(4))
-console.log(referenciaMes(5))
-console.log(referenciaMes(6))
-console.log(referenciaMes(7))
-console.log(referenciaMes(8))
-console.log(referenciaMes(9))
-console.log(referenciaMes(10))
-console.log(referenciaMes(11))
-console.log(referenciaMes(12))
+
 
 /* 05)
 Crie uma função que receba dois números e retorne se o primeiro é maior ou igual ao segundo.
