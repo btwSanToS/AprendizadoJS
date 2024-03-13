@@ -189,13 +189,15 @@ receberPrimeiroEUltimoElemento([7,14,"olá"]) // retornará [7, "olá"]
 receberPrimeiroEUltimoElemento([-100, "aplicativo", 16]) // retornará [-100, 16]
 */
 
-function receberPrimeiroEUltimoElemento(array) {
-    if (array.length === 0) {
-        return [];
-    } else {
-        return [array[0], array[array.length - 1]];
+function receberPrimeiroEUltimoElemento(valor) {
+    if (valor.length === 0) {
+        return []
+    }
+    else {
+        return [valor[0], valor[valor.length - 1]];
     }
 }
 
 console.log(receberPrimeiroEUltimoElemento([7, 14, "olá"]));
 console.log(receberPrimeiroEUltimoElemento([-100, "aplicativo", 16]));
+console.log(receberPrimeiroEUltimoElemento([30, "Janeiro", 16, 'Erro', null]));
