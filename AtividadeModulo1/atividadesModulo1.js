@@ -242,3 +242,22 @@ console.log(removerPropriedade({
     Posição: 'Zagueiro',
     Número: '4',
 }, 'Número'))
+
+/* 12)
+Crie uma função que receba um array de elementos e retorne um array somente com os números presentes no array recebido como parâmetro.
+filtrarNumeros(["Javascript", 1, "3", "Web", 20]) // retornará [1, 20] 
+filtrarNumeros(["a", "c"]) // retornará []
+*/
+
+const filtrarNumeros = function (array) {
+    var numerosFiltrados = []
+    for (var i = 0; i < array.length; i++) { // Veja i como índice
+        if (typeof array[i] === 'number') {
+            numerosFiltrados.push(array[i])
+        }
+    }
+    return numerosFiltrados
+}
+
+console.log(filtrarNumeros(["Javascript", 1, "3", "Web", 20]))
+console.log(filtrarNumeros(["a", "c"]))
