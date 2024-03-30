@@ -284,3 +284,22 @@ const objetoParaArray = function (obj) {
 }
 console.log(objetoParaArray({ nome: "Maria", profissao: "Desenvolvedora de software"}))
 console.log(objetoParaArray({ codigo: 11111, preco: 12000}))
+
+/* 14)
+Elabore uma função que receba um array de números e retorne um array que tenha todos os números que são pares e que também tenham índices pares.
+
+receberSomenteOsParesDeIndicesPares([1, 2, 3, 4]) // retornará []
+receberSomenteOsParesDeIndicesPares([10, 70, 22, 43]) // retornará [10, 22]
+*/
+
+function receberSomenteOsParesDeIndicesPares(array) {
+    let numerosParesIndicesPares = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0 && i % 2 === 0) {
+            numerosParesIndicesPares.push(array[i]);
+        }
+    }
+    return numerosParesIndicesPares;
+}
+console.log(receberSomenteOsParesDeIndicesPares([1, 2, 3, 4]));
+console.log(receberSomenteOsParesDeIndicesPares([10, 70, 22, 43]));
