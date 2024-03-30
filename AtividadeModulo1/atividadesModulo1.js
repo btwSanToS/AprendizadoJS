@@ -261,3 +261,26 @@ const filtrarNumeros = function (array) {
 
 console.log(filtrarNumeros(["Javascript", 1, "3", "Web", 20]))
 console.log(filtrarNumeros(["a", "c"]))
+
+/* 13)
+Desenvolva uma função que recebe como parâmetro um objeto e retorne um array de arrays, 
+em que cada elemento é um array formado pelos pares chave/valor que corresponde a um atributo do objeto. 
+Observe os exemplos abaixo para um melhor entendimento:
+
+objetoParaArray({ nome: "Maria",
+profissao: "Desenvolvedora de software"}) // irá retornar [["nome", "Maria"], ["profissao", "Desenvolvedora de Software"]])
+
+objetoParaArray({ codigo: 11111, preco: 12000}) // irá retornar [["codigo", 11111], ["preco", 12000]]
+*/
+
+const objetoParaArray = function (obj) {
+    let arrayDeArrays = []
+    for (let chave in obj) {
+        if (obj.hasOwnProperty(chave)) {
+            arrayDeArrays.push(chave, obj[chave])
+        }
+    }
+    return arrayDeArrays
+}
+console.log(objetoParaArray({ nome: "Maria", profissao: "Desenvolvedora de software"}))
+console.log(objetoParaArray({ codigo: 11111, preco: 12000}))
