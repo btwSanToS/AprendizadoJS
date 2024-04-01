@@ -322,3 +322,21 @@ const checarAnoBissexto = function(anoReferencia) {
 }
 console.log(checarAnoBissexto(2020))
 console.log(checarAnoBissexto(2100))
+
+/* 16)
+Escreva uma função que receba um array de números e retornará a soma de todos os números desse array. 
+
+somarNumeros([10, 10, 10]) // retornará 30
+somarNumeros([15, 15, 15, 15]) // retornará 60
+*/
+
+const somarNumeros = function (numeros){
+    let somaTotal = 0
+    for (let runner = 0; runner < numeros.length; runner++){
+        somaTotal += numeros[runner]
+    }
+    return somaTotal
+}
+
+console.log(somarNumeros([10, 10, 10]))
+console.log(somarNumeros([15, 15, 15, 15]))
