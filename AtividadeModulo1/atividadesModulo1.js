@@ -368,9 +368,30 @@ const despesasTotais = function (produtos) {
 }
 
 despesasTotais([
-    {nome: "Jornal online", categoria: "Informação", preco: 89.99},
-    {nome: "Cinema", categoria: "Entretenimento", preco: 150}]) 
-    
-    despesasTotais([
-    {nome: "Galaxy S20", categoria: "Eletrônicos", preco: 3599.99},
-    {nome: "Macbook Pro", categoria: "Eletrônicos", preco: 30999.90}])
+    { nome: "Jornal online", categoria: "Informação", preco: 89.99 },
+    { nome: "Cinema", categoria: "Entretenimento", preco: 150 }]);
+
+despesasTotais([
+    { nome: "Galaxy S20", categoria: "Eletrônicos", preco: 3599.99 },
+    { nome: "Macbook Pro", categoria: "Eletrônicos", preco: 30999.90 }]);
+
+/* 18)
+Numa aplicação Web de investimento financeiro da qual você faz parte da equipe de desenvolvimento, 
+pretende-se adicionar a funcionalidade de calcular a média de um conjunto de números informados pelo usuário.
+Com o intuito de realizar esse cálculo, crie uma função que receba um array com uma quantidade indeterminada de números e retorne a média simples desses números.
+
+calcularMedia([0, 10]) // retornará 5
+calcularMedia([1, 2, 3, 4, 5]) // retornará 3
+*/
+
+const calcularMedia = function (valores) {
+    let somaTotal = 0
+    for (let runner = 0; runner < valores.length; runner++) {
+        somaTotal += valores[runner]
+    }
+    return somaTotal / valores.length
+
+}
+
+console.log(calcularMedia([0, 10]))
+console.log(calcularMedia([1, 2, 3, 4, 5]))
