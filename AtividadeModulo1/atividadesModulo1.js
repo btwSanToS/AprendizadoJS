@@ -313,8 +313,8 @@ checarAnoBissexto(2020) // retornará true
 checarAnoBissexto(2100) // retornará false, pois é múltiplo de 100 e não é múltiplo de 400
 */
 
-const checarAnoBissexto = function(anoReferencia) {
-    if ((anoReferencia % 4 === 0 && anoReferencia % 100 !== 0) || anoReferencia % 400 === 0){
+const checarAnoBissexto = function (anoReferencia) {
+    if ((anoReferencia % 4 === 0 && anoReferencia % 100 !== 0) || anoReferencia % 400 === 0) {
         return true
     } else {
         return false
@@ -330,9 +330,9 @@ somarNumeros([10, 10, 10]) // retornará 30
 somarNumeros([15, 15, 15, 15]) // retornará 60
 */
 
-const somarNumeros = function (numeros){
+const somarNumeros = function (numeros) {
     let somaTotal = 0
-    for (let runner = 0; runner < numeros.length; runner++){
+    for (let runner = 0; runner < numeros.length; runner++) {
         somaTotal += numeros[runner]
     }
     return somaTotal
@@ -340,3 +340,37 @@ const somarNumeros = function (numeros){
 
 console.log(somarNumeros([10, 10, 10]))
 console.log(somarNumeros([15, 15, 15, 15]))
+
+/* 17)
+Você está trabalhando numa aplicação pessoal de controle de despesas. 
+Na tela principal dessa aplicação, é possível adicionar produtos ou serviços, informando nome, categoria e preço. 
+Uma funcionalidade que você está desenvolvendo no momento é a de somar o total das despesas.
+Crie uma função que receba um array de produtos e retorne o total das despesas.
+
+despesasTotais([
+{nome: "Jornal online", categoria: "Informação", preco: 89.99},
+{nome: "Cinema", categoria: "Entretenimento", preco: 150}
+]) // retornará 239.99
+
+despesasTotais([
+{nome: "Galaxy S20", categoria: "Eletrônicos", preco: 3599.99},
+{nome: "Macbook Pro", categoria: "Eletrônicos", preco: 30999.90}
+]) // retornará 34599.89
+*/
+
+const despesasTotais = function (produtos) {
+    let despesas = 0
+
+    produtos.forEach(produto => {
+        despesas += produto.preco
+    });
+    return console.log(despesas.toFixed(2))
+}
+
+despesasTotais([
+    {nome: "Jornal online", categoria: "Informação", preco: 89.99},
+    {nome: "Cinema", categoria: "Entretenimento", preco: 150}]) 
+    
+    despesasTotais([
+    {nome: "Galaxy S20", categoria: "Eletrônicos", preco: 3599.99},
+    {nome: "Macbook Pro", categoria: "Eletrônicos", preco: 30999.90}])
