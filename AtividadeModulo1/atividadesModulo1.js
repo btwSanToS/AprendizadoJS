@@ -431,3 +431,25 @@ const menorNumero = function (array) {
 }
 console.log(menorNumero([10, 5, 35, 65]))
 console.log(menorNumero([5, -15, 50, 3]))
+
+/* 21)
+Desenvolva uma função que receba como parâmetro um número de 1 a 10. Internamente, na função, será gerado um número aleatório de 1 a 10. 
+A função deverá retornar se o parâmetro de entrada foi igual ao número sorteado internamente. 
+Se o valor fornecido foi o sorteado, retorne "Parabéns! O número sorteado foi o X". Se não for igual, retorne "Que pena! O número sorteado foi o X". X é o número que foi sorteado
+
+funcaoDaSorte(10) // retornará "Parabéns! O número sorteado foi o 10" 
+funcaoDaSorte(5) // retornará "Que pena! O número sorteado foi o 3" 
+funcaoDaSorte(5) // retornará "Que pena! O número sorteado foi o 1"
+*/
+
+const funcaoDaSorte = function (numeroDaSorte) {
+    let randomico = Math.floor(Math.random() * 11)
+    if (randomico == numeroDaSorte) {
+        console.log(`Parabéns! O número sorteado foi o ${randomico}`)
+    } else {
+        console.log(`Que pena! O número sorteado foi o ${randomico}`)
+    }
+}
+funcaoDaSorte(10)
+funcaoDaSorte(5)
+funcaoDaSorte(5)
