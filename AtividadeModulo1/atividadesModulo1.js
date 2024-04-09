@@ -412,3 +412,22 @@ const areaDoTriangulo = function (base = 0, altura = 0) {
 areaDoTriangulo(10, 15)
 areaDoTriangulo(7, 9)
 areaDoTriangulo(9.25, 13.1)
+
+/* 20)
+Criar uma função que receba um array de números e retorne o menor número desse array;
+
+menorNumero([10, 5, 35, 65]) // retornará 5
+menorNumero([5, -15, 50, 3]) // retornará -15
+*/
+
+const menorNumero = function (array) {
+    let menor = array[0]
+    for (runner = 1; runner < array.length; runner++) {
+        if (array[runner] < menor) {
+            menor = array[runner]
+        }
+    }
+    return menor
+}
+console.log(menorNumero([10, 5, 35, 65]))
+console.log(menorNumero([5, -15, 50, 3]))
