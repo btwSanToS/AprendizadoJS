@@ -1,27 +1,11 @@
 /* 01)
-Crie uma função que retorna a string "Olá, " concatenada com um argumento text (a ser passado para a função) e com ponto de exclamação "!" no final.
+Crie uma função que retorna a string "Olá, " concatenada com um 
+argumento text (a ser passado para a função) e com ponto de exclamação "!" no final.
 */
-
-/* Primeira resolução, utilizando variáveis ↓↓↓↓
-function saudacaoInicial(text) {
-    return 'Olá, ' + text + '!'
-}
-
-const nome1 = 'André'
-const nome2 = 'Santos'
-const saudacao1 = saudacaoInicial(nome1);
-console.log(saudacao1) // Retorno: Olá, André!
-
-const saudacao2 = saudacaoInicial(nome2);
-console.log(saudacao2); // Retorno: Olá, Santos!
-*/
-
-// Segunda resolução, aprimorada para não ter variáveis de nomes específicos.
 
 function cumprimentar(text) {
     return `Olá ${text}!`
 }
-
 const saudacao = cumprimentar('André')
 console.log(saudacao);
 
@@ -35,7 +19,6 @@ function converterIdadeDias(idadeEmAnos) {
     const idadeEmDias = idadeEmAnos * diasPorAno
 
     return idadeEmDias;
-
 }
 const idade = 80
 const idadeConvertida = converterIdadeDias(idade);
@@ -54,7 +37,6 @@ function salarioFuncionario(horasTrabalhadas, valorHora) {
 
     return stringSalario;
 }
-
 const devSr1 = {
     nome: "Clóvis da Cruz",
     valorHora: 150,
@@ -81,7 +63,6 @@ function referenciaMes(informeMes) {
 
     return mes[informeMes - 1]
 }
-
 console.log(referenciaMes(4))
 
 
@@ -93,7 +74,6 @@ Exemplo: maiorOuIgual (0, 0) // Retornará True
 function maiorOuIgual(num1, num2) {
     return num1 >= num2
 }
-
 let resultadoFinal = maiorOuIgual(1, 2)
 console.log(resultadoFinal)
 
@@ -117,7 +97,6 @@ function valorInvertido(parametro) {
             `booleano ou números esperado, mas o parâmetro é do tipo ${typeof parametro}`;
 
 }
-
 console.log(valorInvertido("25"))
 console.log(valorInvertido(-3456))
 console.log(valorInvertido(3456))
@@ -138,7 +117,6 @@ function multiplicar(valor1, valor2) {
     }
     return valor1 + multiplicar(valor1, valor2 - 1)
 }
-
 console.log(multiplicar(4, 5))
 
 /* 08)
@@ -161,7 +139,6 @@ function repeticaoDados(elemento, quantidade) {
     const resultadoFinal = Array(quantidade).fill(elemento)
     return resultadoFinal
 }
-
 console.log(repeticaoDados(123, 4))
 console.log(repeticaoDados('Texto', 2))
 
@@ -179,7 +156,6 @@ function repeticaoParametro(quantidade) {
     const resultadoFinal = '+'.repeat(quantidade)
     return resultadoFinal
 }
-
 console.log(repeticaoParametro(6))
 
 /* 10)
@@ -197,7 +173,6 @@ function receberPrimeiroEUltimoElemento(valor) {
         return [valor[0], valor[valor.length - 1]];
     }
 }
-
 console.log(receberPrimeiroEUltimoElemento([7, 14, "olá"]));
 console.log(receberPrimeiroEUltimoElemento([-100, "aplicativo", 16]));
 console.log(receberPrimeiroEUltimoElemento([30, "Janeiro", 16, 'Erro', null]));
@@ -216,20 +191,16 @@ descricao: "Não preenchido"
 
 function removerPropriedade(objeto, propriedade) {
     const copiaObjeto = { ...objeto }
-
     if (copiaObjeto.hasOwnProperty(propriedade)) {
         delete copiaObjeto[propriedade]
     }
     return copiaObjeto
 }
-
 console.log(removerPropriedade({ // Formato de Objeto Padrão.
     a: 1,
     b: 2
 }, "a"))
-
 //console.log(removerPropriedade({ a: 1, b: 2 }, "a")) Formato Linear
-
 console.log(removerPropriedade({ // Formato de Objeto Padrão.
     id: 20,
     nome: "caneta",
@@ -258,7 +229,6 @@ const filtrarNumeros = function (array) {
     }
     return numerosFiltrados
 }
-
 console.log(filtrarNumeros(["Javascript", 1, "3", "Web", 20]))
 console.log(filtrarNumeros(["a", "c"]))
 
@@ -267,9 +237,7 @@ Desenvolva uma função que recebe como parâmetro um objeto e retorne um array 
 em que cada elemento é um array formado pelos pares chave/valor que corresponde a um atributo do objeto. 
 Observe os exemplos abaixo para um melhor entendimento:
 
-objetoParaArray({ nome: "Maria",
-profissao: "Desenvolvedora de software"}) // irá retornar [["nome", "Maria"], ["profissao", "Desenvolvedora de Software"]])
-
+objetoParaArray({ nome: "Maria", profissao: "Desenvolvedora de software"}) // irá retornar [["nome", "Maria"], ["profissao", "Desenvolvedora de Software"]])
 objetoParaArray({ codigo: 11111, preco: 12000}) // irá retornar [["codigo", 11111], ["preco", 12000]]
 */
 
@@ -337,7 +305,6 @@ const somarNumeros = function (numeros) {
     }
     return somaTotal
 }
-
 console.log(somarNumeros([10, 10, 10]))
 console.log(somarNumeros([15, 15, 15, 15]))
 
@@ -360,17 +327,14 @@ despesasTotais([
 
 const despesasTotais = function (produtos) {
     let despesas = 0
-
     produtos.forEach(produto => {
         despesas += produto.preco
     });
     return console.log(despesas.toFixed(2))
 }
-
 despesasTotais([
     { nome: "Jornal online", categoria: "Informação", preco: 89.99 },
     { nome: "Cinema", categoria: "Entretenimento", preco: 150 }]);
-
 despesasTotais([
     { nome: "Galaxy S20", categoria: "Eletrônicos", preco: 3599.99 },
     { nome: "Macbook Pro", categoria: "Eletrônicos", preco: 30999.90 }]);
@@ -390,9 +354,7 @@ const calcularMedia = function (valores) {
         somaTotal += valores[runner]
     }
     return somaTotal / valores.length
-
 }
-
 console.log(calcularMedia([0, 10]))
 console.log(calcularMedia([1, 2, 3, 4, 5]))
 
