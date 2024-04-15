@@ -441,12 +441,13 @@ contarCaractere("c", "Conhece-te a ti mesmo") // retornará 1
 
 const contarCaractere = function (caracter, frase) {
     let = contador = 0
-        for(runner = 0; runner < frase.length; runner++){
-            if (frase[runner] === caracter){
-                contador++
-            }
+    for (runner = 0; runner < frase.length; runner++) {
+        if (frase[runner] === caracter) {
+            contador++
         }
-        return contador
     }
-    console.log(contarCaractere("r", "A sorte favorece os audazes"))
-    console.log(contarCaractere("c", "Conhece-te a ti mesmo"))
+    return contador
+}
+console.log(contarCaractere("r", "A sorte favorece os audazes"))
+console.log(contarCaractere("c", "Conhece-te a ti mesmo"))
+
