@@ -430,3 +430,23 @@ const contarPalavras = function (array) {
 
 console.log(contarPalavras("Sou uma frase"))
 console.log(contarPalavras("Me divirto aprendendo a programar"))
+
+/* 23)
+Desenvolva uma função que recebe um caractere e uma string como parâmetros e retorne a quantidade de vezes que o caractere se repete na string.
+A função deverá ser case-sensitive, ou seja, irá diferenciar maiúsculas de minúsculas.
+
+contarCaractere("r", "A sorte favorece os audazes") // retornará 2 
+contarCaractere("c", "Conhece-te a ti mesmo") // retornará 1
+*/
+
+const contarCaractere = function (caracter, frase) {
+    let = contador = 0
+        for(runner = 0; runner < frase.length; runner++){
+            if (frase[runner] === caracter){
+                contador++
+            }
+        }
+        return contador
+    }
+    console.log(contarCaractere("r", "A sorte favorece os audazes"))
+    console.log(contarCaractere("c", "Conhece-te a ti mesmo"))
