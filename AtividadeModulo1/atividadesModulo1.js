@@ -451,3 +451,23 @@ const contarCaractere = function (caracter, frase) {
 console.log(contarCaractere("r", "A sorte favorece os audazes"))
 console.log(contarCaractere("c", "Conhece-te a ti mesmo"))
 
+/* 24)
+A fim de criar um mecanismo de busca para sua aplicação, você precisa iniciar criando uma função para identificar palavras semelhantes.
+Escreva uma função que recebe como primeiro parâmetro uma palavra e, como segundo parâmetro, um array de strings. 
+A função deverá filtrar as palavras do array que contêm nelas a string do primeiro parâmetro. Exemplos:
+
+buscarPalavrasSemelhantes("pro", ["programação", "mobile", "profissional"]) // retornará ["programação", "profissional"] 
+buscarPalavrasSemelhantes("python", ["javascript", "java", "c++"]) // retornará []
+*/
+
+const buscarPalavrasSemelhantes = function (partePalavra, palavra) {
+    let stringValidada = []
+    for (runner = 0; runner < palavra.length; runner++) {
+        if (palavra[runner].includes(partePalavra)) {
+            stringValidada.push(palavra[runner])
+        }
+    }
+    return stringValidada
+}
+console.log(buscarPalavrasSemelhantes("pro", ["programação", "mobile", "profissional"]))
+console.log(buscarPalavrasSemelhantes("python", ["javascript", "java", "c++"]))
