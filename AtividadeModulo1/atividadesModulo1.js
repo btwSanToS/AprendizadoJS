@@ -492,3 +492,21 @@ const removerVogais = function (palavra) {
 
 console.log(removerVogais("Cod3r"))
 console.log(removerVogais("Fundamentos"))
+
+/* 26)
+Desenvolva uma função que recebe um objeto como parâmetro e retorne um outro objeto que corresponde ao objeto recebido como parâmetro, 
+porém com as posições das chaves e valores invertidas, conforme exemplo a seguir:
+
+inverter({ a: 1, b: 2, c: 3}) // retornará { 1: "a", 2: "b", 3: "c"}
+*/
+
+const inverter = function (obj) {
+    let objInvertido = {}
+    for (let chave in obj) {
+        if (obj.hasOwnProperty(chave)) {
+            objInvertido[obj[chave]] = chave
+        }
+    }
+    return objInvertido
+}
+console.log(inverter({ a: 1, b: 2, c: 3 }));
