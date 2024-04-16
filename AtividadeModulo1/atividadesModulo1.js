@@ -510,3 +510,23 @@ const inverter = function (obj) {
     return objInvertido
 }
 console.log(inverter({ a: 1, b: 2, c: 3 }));
+
+/* 27)
+Elabore uma função que recebe dois parâmetros: o primeiro é um array de números e o segundo é um número que especifica uma quantidade de dígitos. 
+Essa função deverá retornar somente aqueles números do array que têm a quantidade de dígitos indicada pelo segundo parâmetro.
+
+filtrarPorQuantidadeDeDigitos([38, 2, 365, 10, 125, 11], 2) // retornará [38, 10, 11]
+filtrarPorQuantidadeDeDigitos([5, 9, 1, 125, 11], 1) // retornará [5, 9, 1]
+*/
+
+const filtrarPorQuantidadeDeDigitos = function (arrayNumerico, digitosNumeral) {
+    let stringCorreta = []
+    for(runner = 0; runner < arrayNumerico.length; runner++){
+        if(arrayNumerico[runner].toString().length == digitosNumeral){
+            stringCorreta.push(arrayNumerico[runner])
+        }
+    }
+    return stringCorreta
+}
+console.log(filtrarPorQuantidadeDeDigitos([38, 2, 365, 10, 125, 11], 2))
+console.log(filtrarPorQuantidadeDeDigitos([5, 9, 1, 125, 11], 1))
