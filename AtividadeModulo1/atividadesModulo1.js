@@ -521,8 +521,8 @@ filtrarPorQuantidadeDeDigitos([5, 9, 1, 125, 11], 1) // retornará [5, 9, 1]
 
 const filtrarPorQuantidadeDeDigitos = function (arrayNumerico, digitosNumeral) {
     let stringCorreta = []
-    for(runner = 0; runner < arrayNumerico.length; runner++){
-        if(arrayNumerico[runner].toString().length == digitosNumeral){
+    for (runner = 0; runner < arrayNumerico.length; runner++) {
+        if (arrayNumerico[runner].toString().length == digitosNumeral) {
             stringCorreta.push(arrayNumerico[runner])
         }
     }
@@ -530,3 +530,19 @@ const filtrarPorQuantidadeDeDigitos = function (arrayNumerico, digitosNumeral) {
 }
 console.log(filtrarPorQuantidadeDeDigitos([38, 2, 365, 10, 125, 11], 2))
 console.log(filtrarPorQuantidadeDeDigitos([5, 9, 1, 125, 11], 1))
+
+/* 28)
+Crie uma função que recebe um array de números e retorna o segundo maior número presente nesse array. 
+
+segundoMaior([12, 16, 1, 5]) // retornará 12
+segundoMaior([8, 4, 5, 6]) // retornará 6
+*/
+
+const segundoMaior = function (arrayNumerico) {
+    let maiorNumero = Math.max(...arrayNumerico)
+    arrayNumerico.splice(arrayNumerico.indexOf(maiorNumero), 1)
+    let segundoMaior = Math.max(...arrayNumerico)
+    return segundoMaior
+}
+console.log(segundoMaior([12, 16, 1, 5]))
+console.log(segundoMaior([8, 4, 5, 6]))
